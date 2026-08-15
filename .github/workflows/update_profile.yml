@@ -3,19 +3,23 @@ name: Actualización Dinámica de README
 on:
   schedule:
     - cron: '0 5 * * *'
-  workflow_dispatch: # Esto agrega un botón para que puedas probarlo manualmente
+  workflow_dispatch:
+
+# ¡Esta es la línea mágica que le da permisos al bot para guardar los cambios!
+permissions:
+  contents: write 
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Descargar el repositorio
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # Actualizado a v4
 
       - name: Instalar Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4 # Actualizado a v4
         with:
-          node-version: '18'
+          node-version: '20' # Actualizado a una versión moderna
 
       - name: Ejecutar script de actualización
         run: node update.js
