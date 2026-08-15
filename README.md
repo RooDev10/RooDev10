@@ -1,4 +1,5 @@
-.---.                       ronald@roodev10
+```
+       .---.                       ronald@roodev10
       /     \                      ---------------
       \.@-@./                      Name..............: Ronald Joel Peralta Chipa
       /`\_/`\                      OS................: CachyOS (Linux)
