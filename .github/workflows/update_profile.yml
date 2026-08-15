@@ -1,0 +1,29 @@
+name: Actualización Dinámica de README
+
+on:
+  schedule:
+    - cron: '0 5 * * *'
+  workflow_dispatch: # Esto agrega un botón para que puedas probarlo manualmente
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Ejecutar script de actualización
+        run: node update.js
+
+      - name: Guardar los cambios (Commit & Push)
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m "Actualización automática de métricas diarias" || exit 0
+          git push
