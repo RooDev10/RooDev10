@@ -8,7 +8,7 @@
    /`\_`>  <_/ \                   IDE...............: VS Code
    \__/'---'\__/                   
                                    Stats.Age.........: <!-- START_AGE -->23<!-- END_AGE --> años
-                                   Stats.CodingDays..: <!-- START_DAYS -->1274<!-- END_DAYS --> días
+                                   Stats.CodingDays..: <!-- START_DAYS -->1275<!-- END_DAYS --> días
                                    Zodiac............: Cáncer ♋
                                    
                                    Hobbies.Tech......: DevOps, Backend Architecture
