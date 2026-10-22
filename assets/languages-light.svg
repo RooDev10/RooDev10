@@ -16,17 +16,17 @@
   <rect x="0.5" y="0.5" width="999" height="169" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
   <text class="title" x="24" y="36">Lenguajes más usados</text>
   <clipPath id="bar"><rect x="24" y="56" width="952" height="14" rx="7"/></clipPath>
-  <g clip-path="url(#bar)"><rect x="24.00" y="56" width="365.39" height="14" fill="#f1e05a"/><rect x="389.39" y="56" width="347.28" height="14" fill="#7355dd"/><rect x="736.67" y="56" width="176.11" height="14" fill="#663399"/><rect x="912.78" y="56" width="51.57" height="14" fill="#41b883"/><rect x="964.35" y="56" width="11.65" height="14" fill="#e34c26"/></g>
+  <g clip-path="url(#bar)"><rect x="24.00" y="56" width="369.11" height="14" fill="#f1e05a"/><rect x="393.11" y="56" width="345.08" height="14" fill="#7355dd"/><rect x="738.19" y="56" width="175.00" height="14" fill="#663399"/><rect x="913.19" y="56" width="51.24" height="14" fill="#41b883"/><rect x="964.43" y="56" width="11.57" height="14" fill="#e34c26"/></g>
   
   <circle cx="30" cy="98" r="6" fill="#f1e05a"/>
   <text x="44" y="102" font-size="14">JavaScript</text>
-  <text class="muted" x="324" y="102" text-anchor="end">38.4%</text>
+  <text class="muted" x="324" y="102" text-anchor="end">38.8%</text>
   <circle cx="350" cy="98" r="6" fill="#7355dd"/>
   <text x="364" y="102" font-size="14">C#</text>
-  <text class="muted" x="644" y="102" text-anchor="end">36.5%</text>
+  <text class="muted" x="644" y="102" text-anchor="end">36.2%</text>
   <circle cx="670" cy="98" r="6" fill="#663399"/>
   <text x="684" y="102" font-size="14">CSS</text>
-  <text class="muted" x="964" y="102" text-anchor="end">18.5%</text>
+  <text class="muted" x="964" y="102" text-anchor="end">18.4%</text>
   <circle cx="30" cy="126" r="6" fill="#41b883"/>
   <text x="44" y="130" font-size="14">Vue</text>
   <text class="muted" x="324" y="130" text-anchor="end">5.4%</text>
