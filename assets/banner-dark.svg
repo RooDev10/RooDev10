@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300">
+<style>
+  text { font-family: 'Segoe UI', system-ui, -apple-system, Ubuntu, Helvetica, Arial, sans-serif; fill: #e6edf3; }
+  .label { font: 600 12px 'JetBrains Mono', 'Fira Code', Consolas, monospace; fill: #8b949e; letter-spacing: 0.08em; }
+  .value { font: 700 30px 'Segoe UI', system-ui, -apple-system, Ubuntu, Helvetica, Arial, sans-serif; }
+  .title { font: 600 16px 'Segoe UI', system-ui, -apple-system, Ubuntu, Helvetica, Arial, sans-serif; }
+  .muted { fill: #8b949e; font-size: 13px; }
+  .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+  .scan { animation: scan 7s linear infinite; }
+  .cursor { animation: blink 1s steps(2) infinite; }
+  @keyframes scan { from { transform: translateY(0); } to { transform: translateY(300px); } }
+  @keyframes blink { to { visibility: hidden; } }
+</style>
+
+  <defs>
+    <linearGradient id="brand" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#a371f7"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#30363d" opacity="0.5"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.85" cy="0.2" r="0.6">
+      <stop offset="0" stop-color="#a371f7" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#a371f7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="300" rx="16" fill="#0d1117"/>
+  <rect width="1000" height="300" rx="16" fill="url(#grid)"/>
+  <rect width="1000" height="300" rx="16" fill="url(#glow)"/>
+  <rect width="6" height="300" rx="3" fill="url(#brand)"/>
+  <line class="scan" x1="0" x2="1000" y1="0" y2="0" stroke="#58a6ff" stroke-opacity="0.25" stroke-width="2"/>
+
+  <text class="mono" x="56" y="78" font-size="16" fill="#58a6ff">$ whoami</text>
+  <rect class="cursor" x="140" y="62" width="9" height="19" fill="#58a6ff"/>
+
+  <text x="56" y="150" font-size="60" font-weight="800" fill="url(#brand)">Ronald Peralta</text>
+  <text x="56" y="190" font-size="22" font-weight="600">Software Engineer · Backend &amp; DevOps</text>
+  <text class="muted" x="56" y="232" font-size="15">Lima, Perú  ·  23 años  ·  1,331 días programando</text>
+
+  <text class="mono" x="960" y="276" font-size="12" text-anchor="end" fill="#8b949e">actualizado 2026-10-22</text>
+  
+</svg>

@@ -1,33 +1,35 @@
-name: Actualización Dinámica de README
+name: Actualizar perfil
 
 on:
   schedule:
     - cron: '0 5 * * *'
   workflow_dispatch:
 
-# ¡Esta es la línea mágica que le da permisos al bot para guardar los cambios!
 permissions:
-  contents: write 
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Descargar el repositorio
-        uses: actions/checkout@v4 # Actualizado a v4
+        uses: actions/checkout@v4
 
       - name: Instalar Node.js
-        uses: actions/setup-node@v4 # Actualizado a v4
+        uses: actions/setup-node@v4
         with:
-          node-version: '20' # Actualizado a una versión moderna
+          node-version: '20'
 
-      - name: Ejecutar script de actualización
-        run: node update.js
+      - name: Generar README y tarjetas
+        run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Guardar los cambios (Commit & Push)
+      - name: Guardar cambios
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add README.md
-          git commit -m "Actualización automática de métricas diarias" || exit 0
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md assets/
+          git diff --staged --quiet && exit 0
+          git commit -m "Actualización automática de métricas diarias"
           git push
