@@ -1,14 +1,16 @@
 {
   "login": "RooDev10",
   "name": "Ronald Peralta",
+  "prompt": "Brazo de 40cm",
   "headline": "Software Engineer · Backend & DevOps",
   "location": "Lima, Perú",
   "birthDate": "2003-06-29",
   "codingSince": "2023-03-01",
-  "work": "Software Engineer @ Mandu",
-  "education": "Ingeniería de Software · UPC (8.º ciclo)",
-  "os": "CachyOS",
-  "ide": "VS Code",
-  "hobbies": "Entrenamiento, Fortnite",
-  "email": "ronald.rk15@gmail.com"
+  "about": [
+    { "label": "Trabajo", "value": "Software Engineer @ Mandu" },
+    { "label": "Formación", "value": "Ingeniería de Software · UPC (8.º ciclo)" },
+    { "label": "Entorno", "value": "CachyOS · VS Code" },
+    { "label": "Hobbies", "value": "Entrenamiento, Fortnite" },
+    { "label": "Contacto", "value": "ronald.rk15@gmail.com", "url": "mailto:ronald.rk15@gmail.com" }
+  ]
 }

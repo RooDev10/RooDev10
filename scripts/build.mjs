@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fetchProfile } from './lib/github.mjs';
 import { computeMetrics } from './lib/metrics.mjs';
-import { THEMES, renderBanner, renderContributions, renderLanguages, renderStats } from './lib/cards.mjs';
+import { THEMES, renderBanner, renderLanguages, renderStats } from './lib/cards.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const assetsDir = path.join(root, 'assets');
@@ -12,7 +12,6 @@ const CARDS = {
   banner: { render: renderBanner, alt: 'Banner de perfil' },
   stats: { render: renderStats, alt: 'Métricas de GitHub' },
   languages: { render: renderLanguages, alt: 'Lenguajes más usados' },
-  contributions: { render: renderContributions, alt: 'Actividad del último año' },
 };
 
 const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
@@ -37,8 +36,21 @@ const picture = (name) => `<picture>
     <img alt="${CARDS[name].alt}" src="assets/${name}-light.svg">
   </picture>`;
 
+// Cada fila de `about` admite `label`, `value` y, opcionalmente, `url`.
+const tableCell = (text) => String(text).replace(/\|/g, '\\|');
+const aboutTable = (rows) =>
+  [
+    '| Dato | Detalle |',
+    '|---|---|',
+    ...rows.map(({ label, value, url }) => {
+      const text = url ? `[${tableCell(value)}](${url})` : tableCell(value);
+      return `| **${tableCell(label)}** | ${text} |`;
+    }),
+  ].join('\n');
+
 const values = {
   ...config,
+  about: aboutTable(config.about),
   age: metrics.age,
   daysCoding: metrics.daysCoding,
   updatedAt: metrics.updatedAt,

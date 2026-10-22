@@ -20,21 +20,16 @@
 | **Formación** | Ingeniería de Software · UPC (8.º ciclo) |
 | **Entorno** | CachyOS · VS Code |
 | **Hobbies** | Entrenamiento, Fortnite |
-| **Contacto** | ronald.rk15@gmail.com |
+| **Contacto** | [ronald.rk15@gmail.com](mailto:ronald.rk15@gmail.com) |
 
 ## Lenguajes
 
-<picture>
+<p align="center">
+  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
     <img alt="Lenguajes más usados" src="assets/languages-light.svg">
   </picture>
-
-## Actividad del último año
-
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/contributions-dark.svg">
-    <img alt="Actividad del último año" src="assets/contributions-light.svg">
-  </picture>
+</p>
 
 <p align="center">
   <sub>Métricas generadas automáticamente cada día · última actualización 2026-10-22</sub>

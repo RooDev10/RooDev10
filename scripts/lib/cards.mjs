@@ -7,7 +7,6 @@ export const THEMES = {
     muted: '#8b949e',
     accent: '#58a6ff',
     accent2: '#a371f7',
-    heat: ['#21262d', '#0e4429', '#006d32', '#26a641', '#39d353'],
   },
   light: {
     bg: '#ffffff',
@@ -17,7 +16,6 @@ export const THEMES = {
     muted: '#59636e',
     accent: '#0969da',
     accent2: '#8250df',
-    heat: ['#eaeef2', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
   },
 };
 
@@ -54,6 +52,9 @@ function panel(width, height, t, x = 0, y = 0, w = width, h = height) {
 export function renderBanner({ config, metrics }, t) {
   const width = 1000;
   const height = 300;
+  const promptText = `$ ${config.prompt}`;
+  // Aproximación del ancho de una letra monoespaciada de 16px (0.6em).
+  const cursorX = 56 + promptText.length * 9.6 + 4;
 
   return svg(width, height, t, `
   <defs>
@@ -75,8 +76,8 @@ export function renderBanner({ config, metrics }, t) {
   <rect width="6" height="${height}" rx="3" fill="url(#brand)"/>
   <line class="scan" x1="0" x2="${width}" y1="0" y2="0" stroke="${t.accent}" stroke-opacity="0.25" stroke-width="2"/>
 
-  <text class="mono" x="56" y="78" font-size="16" fill="${t.accent}">$ whoami</text>
-  <rect class="cursor" x="140" y="62" width="9" height="19" fill="${t.accent}"/>
+  <text class="mono" x="56" y="78" font-size="16" fill="${t.accent}">${esc(promptText)}</text>
+  <rect class="cursor" x="${cursorX.toFixed(1)}" y="62" width="9" height="19" fill="${t.accent}"/>
 
   <text x="56" y="150" font-size="60" font-weight="800" fill="url(#brand)">${esc(config.name)}</text>
   <text x="56" y="190" font-size="22" font-weight="600">${esc(config.headline)}</text>
@@ -148,35 +149,5 @@ export function renderLanguages({ metrics }, t) {
   <clipPath id="bar"><rect x="${barX}" y="56" width="${barWidth}" height="14" rx="7"/></clipPath>
   <g clip-path="url(#bar)">${segments}</g>
   ${legend}
-  `);
-}
-
-export function renderContributions({ metrics }, t) {
-  const width = 1000;
-  const height = 200;
-  const cell = 13;
-  const pitch = 16;
-  const originX = 24;
-  const originY = 64;
-
-  const weeks = [];
-  for (let i = 0; i < metrics.days.length; i += 7) {
-    weeks.push(metrics.days.slice(i, i + 7));
-  }
-  const max = Math.max(1, ...metrics.days.map((d) => d.contributionCount));
-
-  const cells = weeks
-    .flatMap((week, col) =>
-      week.map((day, row) => {
-        const level = day.contributionCount === 0 ? 0 : Math.min(4, Math.ceil((day.contributionCount / max) * 4));
-        return `<rect x="${originX + col * pitch}" y="${originY + row * pitch}" width="${cell}" height="${cell}" rx="3" fill="${t.heat[level]}"><title>${day.date}: ${day.contributionCount}</title></rect>`;
-      }),
-    )
-    .join('');
-
-  return svg(width, height, t, `
-  ${panel(width, height, t)}
-  <text class="title" x="${originX}" y="36">${NUMBER.format(metrics.contributionsYear)} contribuciones en el último año</text>
-  ${cells}
   `);
 }
