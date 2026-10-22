@@ -6,9 +6,9 @@
   {{picture:stats}}
 </p>
 
-## Sobre mí
-
-{{about}}
+<p align="center">
+  {{picture:about}}
+</p>
 
 ## Lenguajes
 

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="336" viewBox="0 0 1000 336">
+<style>
+  text { font-family: 'Segoe UI', system-ui, -apple-system, Ubuntu, Helvetica, Arial, sans-serif; fill: #1f2328; }
+  .label { font: 600 12px 'JetBrains Mono', 'Fira Code', Consolas, monospace; fill: #59636e; letter-spacing: 0.08em; }
+  .value { font: 700 30px 'Segoe UI', system-ui, -apple-system, Ubuntu, Helvetica, Arial, sans-serif; }
+  .title { font: 600 16px 'Segoe UI', system-ui, -apple-system, Ubuntu, Helvetica, Arial, sans-serif; }
+  .muted { fill: #59636e; font-size: 13px; }
+  .item { font: 500 18px 'Segoe UI', system-ui, -apple-system, Ubuntu, Helvetica, Arial, sans-serif; }
+  .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+  .scan { animation: scan 7s linear infinite; }
+  .cursor { animation: blink 1s steps(2) infinite; }
+  @keyframes scan { from { transform: translateY(0); } to { transform: translateY(336px); } }
+  @keyframes blink { to { visibility: hidden; } }
+</style>
+
+  <defs>
+    <linearGradient id="brand" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0969da"/>
+      <stop offset="1" stop-color="#8250df"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="999" height="335" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="title" x="24" y="40">Sobre mí</text>
+  <rect x="24" y="50" width="48" height="3" rx="2" fill="url(#brand)"/>
+  
+  <rect x="24.5" y="64.5" width="467" height="71" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <rect x="24" y="78" width="4" height="44" rx="2" fill="url(#brand)"/>
+  <text class="label" x="44" y="93">TRABAJO</text>
+  <text class="item" x="44" y="118">Software Engineer @ Mandu</text>
+  <rect x="508.5" y="64.5" width="467" height="71" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <rect x="508" y="78" width="4" height="44" rx="2" fill="url(#brand)"/>
+  <text class="label" x="528" y="93">FORMACIÓN</text>
+  <text class="item" x="528" y="118">Ingeniería de Software · UPC (8.º ciclo)</text>
+  <rect x="24.5" y="152.5" width="467" height="71" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <rect x="24" y="166" width="4" height="44" rx="2" fill="url(#brand)"/>
+  <text class="label" x="44" y="181">ENTORNO</text>
+  <text class="item" x="44" y="206">CachyOS</text>
+  <rect x="508.5" y="152.5" width="467" height="71" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <rect x="508" y="166" width="4" height="44" rx="2" fill="url(#brand)"/>
+  <text class="label" x="528" y="181">HOBBIES</text>
+  <text class="item" x="528" y="206">Entrenar, Bailar, Jugar</text>
+  <rect x="24.5" y="240.5" width="467" height="71" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <rect x="24" y="254" width="4" height="44" rx="2" fill="url(#brand)"/>
+  <text class="label" x="44" y="269">CONTACTO</text>
+  <text class="item" x="44" y="294">ronald.rk15@gmail.com</text>
+  
+</svg>

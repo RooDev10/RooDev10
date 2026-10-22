@@ -5,6 +5,7 @@
   .value { font: 700 30px 'Segoe UI', system-ui, -apple-system, Ubuntu, Helvetica, Arial, sans-serif; }
   .title { font: 600 16px 'Segoe UI', system-ui, -apple-system, Ubuntu, Helvetica, Arial, sans-serif; }
   .muted { fill: #59636e; font-size: 13px; }
+  .item { font: 500 18px 'Segoe UI', system-ui, -apple-system, Ubuntu, Helvetica, Arial, sans-serif; }
   .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
   .scan { animation: scan 7s linear infinite; }
   .cursor { animation: blink 1s steps(2) infinite; }

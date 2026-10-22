@@ -12,15 +12,12 @@
   </picture>
 </p>
 
-## Sobre mí
-
-| Dato | Detalle |
-|---|---|
-| **Trabajo** | Software Engineer @ Mandu |
-| **Formación** | Ingeniería de Software · UPC (8.º ciclo) |
-| **Entorno** | CachyOS · VS Code |
-| **Hobbies** | Entrenamiento, Fortnite |
-| **Contacto** | [ronald.rk15@gmail.com](mailto:ronald.rk15@gmail.com) |
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/about-dark.svg">
+    <img alt="Sobre mí" src="assets/about-light.svg">
+  </picture>
+</p>
 
 ## Lenguajes
 

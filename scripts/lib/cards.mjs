@@ -34,6 +34,7 @@ function svg(width, height, t, body) {
   .value { font: 700 30px ${FONT}; }
   .title { font: 600 16px ${FONT}; }
   .muted { fill: ${t.muted}; font-size: 13px; }
+  .item { font: 500 18px ${FONT}; }
   .mono { font-family: ${MONO}; }
   .scan { animation: scan 7s linear infinite; }
   .cursor { animation: blink 1s steps(2) infinite; }
@@ -149,5 +150,43 @@ export function renderLanguages({ metrics }, t) {
   <clipPath id="bar"><rect x="${barX}" y="56" width="${barWidth}" height="14" rx="7"/></clipPath>
   <g clip-path="url(#bar)">${segments}</g>
   ${legend}
+  `);
+}
+
+export function renderAbout({ config }, t) {
+  const width = 1000;
+  const columns = 2;
+  const gap = 16;
+  const pad = 24;
+  const tileWidth = (width - pad * 2 - gap * (columns - 1)) / columns;
+  const tileHeight = 72;
+  const headerHeight = 64;
+
+  const rows = Math.ceil(config.about.length / columns);
+  const cardHeight = headerHeight + rows * (tileHeight + gap) - gap + pad;
+
+  const tiles = config.about
+    .map((item, i) => {
+      const x = pad + (i % columns) * (tileWidth + gap);
+      const y = headerHeight + Math.floor(i / columns) * (tileHeight + gap);
+      return `
+  ${panel(width, cardHeight, t, x, y, tileWidth, tileHeight)}
+  <rect x="${x}" y="${y + 14}" width="4" height="${tileHeight - 28}" rx="2" fill="url(#brand)"/>
+  <text class="label" x="${x + 20}" y="${y + 29}">${esc(item.label.toUpperCase())}</text>
+  <text class="item" x="${x + 20}" y="${y + 54}">${esc(item.value)}</text>`;
+    })
+    .join('');
+
+  return svg(width, cardHeight, t, `
+  <defs>
+    <linearGradient id="brand" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="${t.accent}"/>
+      <stop offset="1" stop-color="${t.accent2}"/>
+    </linearGradient>
+  </defs>
+  ${panel(width, cardHeight, t)}
+  <text class="title" x="${pad}" y="40">Sobre mí</text>
+  <rect x="${pad}" y="50" width="48" height="3" rx="2" fill="url(#brand)"/>
+  ${tiles}
   `);
 }
