@@ -37,8 +37,8 @@
 
   <text x="56" y="150" font-size="60" font-weight="800" fill="url(#brand)">Ronald Peralta</text>
   <text x="56" y="190" font-size="22" font-weight="600">Software Engineer · Backend &amp; DevOps</text>
-  <text class="muted" x="56" y="232" font-size="15">Lima, Perú  ·  23 años  ·  1,331 días programando</text>
+  <text class="muted" x="56" y="232" font-size="15">Lima, Perú  ·  23 años  ·  1,332 días programando</text>
 
-  <text class="mono" x="960" y="276" font-size="12" text-anchor="end" fill="#59636e">actualizado 2026-10-22</text>
+  <text class="mono" x="960" y="276" font-size="12" text-anchor="end" fill="#59636e">actualizado 2026-10-23</text>
   
 </svg>

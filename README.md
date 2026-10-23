@@ -29,5 +29,5 @@
 </p>
 
 <p align="center">
-  <sub>Métricas generadas automáticamente cada día · última actualización 2026-10-22</sub>
+  <sub>Métricas generadas automáticamente cada día · última actualización 2026-10-23</sub>
 </p>
