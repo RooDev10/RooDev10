@@ -15,11 +15,11 @@
 
   <rect x="24.5" y="24.5" width="144.33333333333334" height="101" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
   <text class="label" x="40" y="52">COMMITS / AÑO</text>
-  <text class="value" x="40" y="98">111</text>
+  <text class="value" x="40" y="98">132</text>
   
   <rect x="185.83333333333334" y="24.5" width="144.33333333333334" height="101" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
   <text class="label" x="201.33333333333334" y="52">PULL REQUESTS</text>
-  <text class="value" x="201.33333333333334" y="98">7</text>
+  <text class="value" x="201.33333333333334" y="98">17</text>
   
   <rect x="347.1666666666667" y="24.5" width="144.33333333333334" height="101" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
   <text class="label" x="362.6666666666667" y="52">ESTRELLAS</text>
@@ -35,6 +35,6 @@
   
   <rect x="831.1666666666667" y="24.5" width="144.33333333333334" height="101" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
   <text class="label" x="846.6666666666667" y="52">RACHA ACTUAL</text>
-  <text class="value" x="846.6666666666667" y="98">1d</text>
+  <text class="value" x="846.6666666666667" y="98">2d</text>
   <text class="muted" x="960.0000000000001" y="98" text-anchor="end">máx 4d</text>
 </svg>
