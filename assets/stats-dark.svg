@@ -23,7 +23,7 @@
   
   <rect x="347.1666666666667" y="24.5" width="144.33333333333334" height="101" rx="12" fill="#161b22" stroke="#30363d"/>
   <text class="label" x="362.6666666666667" y="52">ESTRELLAS</text>
-  <text class="value" x="362.6666666666667" y="98">1</text>
+  <text class="value" x="362.6666666666667" y="98">2</text>
   
   <rect x="508.5" y="24.5" width="144.33333333333334" height="101" rx="12" fill="#161b22" stroke="#30363d"/>
   <text class="label" x="524" y="52">REPOS PÚBLICOS</text>
